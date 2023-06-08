@@ -1,0 +1,3 @@
+<riegl_vz400>
+<x = -57> <y = 110> <z=0> <active = "true"> <pulseFreq_hz="100000"> <scanFreq_hz="120"> <headRotatePerSec_deg="10.0"> <verticalAngleMin_deg="-40.0"> <verticalAngleMax_deg="60"> <headRotateStart_deg="0"> <headRotateStop_deg="360"> <trajectoryTimeInterval_s="1.0">
+<x=-57> <y=120> <z=0> <active = "true"> <pulseFreq_hz="100000"> <scanFreq_hz="120"> <headRotatePerSec_deg="10.0"> <verticalAngleMin_deg="-40.0"> <verticalAngleMax_deg="60"> <headRotateStart_deg="0"> <headRotateStop_deg="360"> <trajectoryTimeInterval_s="1.0">
