@@ -9,3 +9,5 @@ The survey generation part has little bugs, but it can be used by providing the 
 Make sure to include the important specifications in the spec files
 
 HELIOS++ can be downloaded and built from the source library : https://github.com/3dgeo-heidelberg/helios
+
+Check ifc2ply.txt file to get an idea of the spec file format
