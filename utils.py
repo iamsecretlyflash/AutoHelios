@@ -2,6 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 from yattag import Doc, indent
 import numpy as np
+from xml.dom import minidom
 
 class XMLScene:
     
@@ -25,7 +26,6 @@ class XMLScene:
         files = os.listdir(self.files_path) # object paths
         file_links = []
         scene_name = (os.path.basename(self.files_path).lower()+'_scene').replace(' ','_')
-        print(f"scene Name = {scene_name}")
         
         doc, tag, text = Doc().tagtext()
 
@@ -46,22 +46,50 @@ class XMLScene:
 
         return result,file_links
     
+def xml_survey(parsed,survey_name, scene_path):
+    root = minidom.Document()
+    xml = root.createElement('document')
+    root.appendChild(xml)
+
+    surveyAttrib = root.createElement('survey')
+    surveyAttrib.setAttribute('name',survey_name)
+    surveyAttrib.setAttribute('scene',str(scene_path))
+    surveyAttrib.setAttribute('platform',"data/platforms.xml#tripod")
+    surveyAttrib.setAttribute('scanner',"data/scanners_tls.xml#"+parsed[0])
+    xml.appendChild(surveyAttrib)
+    
+    legs = parsed[1]
+    for leg in legs:
+        leg_elem = root.createElement('leg')
+        platform = root.createElement('platformSettings')
+        platform.setAttribute('x',str(leg['x']))
+        platform.setAttribute('y',str(leg['y']))
+        platform.setAttribute('z',str(leg['z']))
+        platform.setAttribute("onGround","true")
+
+        scanner = root.createElement("scannerSettings")
+        x,y,z = leg.pop('x'), leg.pop('y'), leg.pop('z')
+        for name,attr in leg.items():
+            scanner.setAttribute(str(name),str(attr))
+              
+        leg_elem.appendChild(platform)
+        leg_elem.appendChild(scanner)
+        surveyAttrib.appendChild(leg_elem)
+
+
+    return root.toprettyxml(indent='\t')
+    
 def parse_spec(spec_path):
     with open(spec_path,'r') as f:
          lines = f.readlines()
-    print(lines[0][1:-2])
     scanner_id = lines[0][1:-2]
     legs = []
     for id,leg in enumerate(lines[1:]):
         spec_list = leg.split('>')[:-1]
-        print(spec_list)
         spec_dict = {}
         for spec in spec_list:
-            print(spec)
             temp_spec = spec.strip()[1:]
-            print(temp_spec)
             temp_spec = temp_spec.split('=')
-            print(temp_spec)
             spec_dict[temp_spec[0].strip()] = eval(temp_spec[1])
         legs.append(spec_dict)
     return scanner_id,legs
