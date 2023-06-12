@@ -11,18 +11,3 @@ Check ifc2ply.txt file to get an idea of the spec file format
 
 HELIOS++ can be downloaded and built from the source library : https://github.com/3dgeo-heidelberg/helios
 
-
-
-@article{heliosPlusPlus,
-title = {Virtual laser scanning with HELIOS++: 
-A novel take on ray tracing-based simulation 
-of topographic full-waveform 3D laser scanning},
-journal = {Remote Sensing of Environment},
-volume = {269},
-year = {2022},
-issn = {0034-4257},
-doi = {https://doi.org/10.1016/j.rse.2021.112772},
-author = {Lukas Winiwarter and Alberto Manuel {Esmorís Pena}
-and Hannah Weiser and Katharina Anders 
-and Jorge {Martínez Sánchez} and Mark Searle and Bernhard Höfle}
-}
