@@ -1,7 +1,8 @@
 # AutoHelios
 
-Put the data generation script inside the helios-plusplus-win folder
-The data generation script inlcudes final_data_generation_for_bim.ipynb and utils.py
+1) Download the HELIOS++ source library from https://github.com/3dgeo-heidelberg/helios. Follow the installation details on their webpage.
+2) Put the data generation notebook and utils.py file inside the HELIOS++ folder.
+3) 
 
 Run the notebook file. It will ask you to enter the path to the 3D meshes. This part will generate the scene and store it inside data/scenes
 
