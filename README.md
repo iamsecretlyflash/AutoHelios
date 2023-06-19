@@ -11,12 +11,17 @@
 
    Each of the scene will have a dedicated folder containing scene.xml and links.csv
 ![Screenshot 2023-06-19 131158](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/3052405a-aa4e-47ae-a10b-f16a426a30c8)
+Scrrenshot from notebook:
+![7](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/99ff859d-1de9-4014-9f84-8e2856d13cc9)
 
-Run the notebook file. It will ask you to enter the path to the 3D meshes. This part will generate the scene and store it inside data/scenes
+ The links.csv file stores the link between part id and correcpoding part file.
 
-The survey generation part has little bugs, but it can be used by providing the path to the folder containign the scanner specs. 
-Make sure to include the important specifications in the spec files
-Check ifc2ply.txt file to get an idea of the spec file format
+ ![Screenshot 2023-06-19 131417](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/9fc0ab06-0054-4a82-9d9f-4cdf18ca4c33)
+ 
+4) To generate the survey xmls you need to provide the path to the folder containing scanner specifications (example format : spec_example.txt). The specification file name must match the name of the folder of the scenepart folder for each of the scenes. (site1 must have spec file named site1.txt)
+ The path can be provided in two ways. The direct path to the spec file if generating only a single survey, else provide the path to a folder containing all the spec files.
+![2](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/ab2542d6-c3e3-4a73-a36f-238a79f3e11a)
+![3](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/4e22b7fe-5a4f-4053-9a81-1f54d49ce4dd)
 
-HELIOS++ can be downloaded and built from the source library : https://github.com/3dgeo-heidelberg/helios
-
+5) The survey will be generated and stored under data/survey under a folder named "[scene_parts_folder_name]_surveys"
+   ![11](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/bfb235a6-fa87-4520-8a09-9dcc95006cc2)
