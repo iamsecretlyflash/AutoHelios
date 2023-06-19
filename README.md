@@ -23,5 +23,11 @@ Scrrenshot from notebook:
 ![2](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/ab2542d6-c3e3-4a73-a36f-238a79f3e11a)
 ![3](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/4e22b7fe-5a4f-4053-9a81-1f54d49ce4dd)
 
-5) The survey will be generated and stored under data/survey under a folder named "[scene_parts_folder_name]_surveys"
-   ![11](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/bfb235a6-fa87-4520-8a09-9dcc95006cc2)
+5) The survey will be generated and stored under data/survey under a folder named "[specifications_folder_name]_surveys"![efvz](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/bb3845e0-6a53-4929-a24d-6579ba2988cb)
+6) To run the helios scans run the final cell. Multiprocessing should be used based on system specifications.
+![10](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/df10bc68-ef9a-4680-b34b-c1a906a2873a)
+7) The outputs will be stored in the outputs folder
+   ![11](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/be21081d-e863-4729-a339-eb11526bffb8)
+   Corresponding to each scanner there will be "leg" file. This file contains the information of the points scanned by the scanner. The part id is also stored.
+
+   
