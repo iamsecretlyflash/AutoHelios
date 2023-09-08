@@ -1,5 +1,7 @@
 # AutoHelios
 
+AutoHelios was developed as a part of my Summer Research Internship at Inria Centre at University of Cotê d'Azur, France. The work was adviced by Prof. Kacper Pluta.
+
 1) Download the HELIOS++ source library from https://github.com/3dgeo-heidelberg/helios. Follow the installation details on their webpage.
 2) Put the data generation notebook and utils.py file inside the HELIOS++ folder.
  ![Screenshot 2023-06-19 112220](https://github.com/iamsecretlyflash/AutoHelios/assets/96828194/aff06479-5eea-42ad-86e9-7da1110dd388)
